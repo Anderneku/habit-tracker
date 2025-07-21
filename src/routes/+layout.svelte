@@ -100,7 +100,7 @@ function formatDate() {
 		<AppSidebar />
 		<Sidebar.Inset>
 			<header
-				class="bg-background sticky top-0 flex h-16 shrink-0 items-center gap-2 border-b px-4"
+				class="top-0 sticky bg-background flex h-16 shrink-0 items-center gap-2 border-b px-4"
 			>
 				<Sidebar.Trigger class="-ml-1 cursor-pointer" />
 				<Separator orientation="vertical" class="mr-2 data-[orientation=vertical]:h-4" />

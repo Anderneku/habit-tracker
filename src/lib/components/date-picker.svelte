@@ -25,7 +25,6 @@
 		_habitsDays = JSON.parse(localStorage.getItem('habitsDays')) || {};
 
 		todaysDate = formatTodaysDate(new Date());
-		console.log(todaysDate);
 		if (!_habitsDays[todaysDate]) {
 			const newEntry = {
 				formatted_day: todaysDate,
@@ -58,7 +57,9 @@
 		if (!_habitsDays[$formattedDay]) {
 			const newEntry = {
 				formatted_day: $formattedDay,
-				habits_status: {}
+				habits_status: {},
+				noOfCompleted: 0,
+				percentCompleted: 0
 			};
 
 			for (const habit of $habits) {

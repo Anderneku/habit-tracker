@@ -6,11 +6,10 @@
 
 	import HabitBlock from '$lib/components/habitBlock/habitBlock.svelte';
 
-	import mdEditor from '$lib/components/mdEditor.svelte';
+	import LineChart from '$lib/components/lineChart.svelte';
 
 	import { habits, habitsDays, formattedDay } from '$lib/store.js';
 	import { onMount } from 'svelte';
-	import MdEditor from '$lib/components/mdEditor.svelte';
 
 	let createHabitDialog = false;
 	let habitGoal = '';
@@ -149,7 +148,6 @@
 	</Dialog.Content>
 </Dialog.Root>
 
-<MdEditor />
 <div class="flex flex-col items-center justify-center gap-4 p-4">
 	{#if dayValue !== undefined && dayValue.habits_status !== undefined && Object.keys(dayValue.habits_status).length > 0}
 		{#each Object.entries(dayValue.habits_status) as [name, data] (name)}
